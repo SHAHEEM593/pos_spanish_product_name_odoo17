@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+   <t t-inherit="point_of_sale.Orderline" t-inherit-mode="extension">
+     <xpath expr="//ul[hasclass('info-list')]" position="before">
+          <br/>
+         <t t-if="line.spanish_name">
+         <span>Spanish Name: <t t-esc="line.spanish_name"/></span>
+         </t>
+     </xpath>
+   </t>
+</templates>

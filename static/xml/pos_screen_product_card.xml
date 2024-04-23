@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-inherit="point_of_sale.ProductCard" t-inherit-mode="extension">
+         <xpath expr="//div[hasclass('product-name')]" position="after">
+              <br/>
+             <t t-if="props.sp_name">
+             <span>Spanish Name:
+                 <t t-esc="props.sp_name"/>
+             </span>
+             </t>
+         </xpath>
+    </t>
+</templates>
